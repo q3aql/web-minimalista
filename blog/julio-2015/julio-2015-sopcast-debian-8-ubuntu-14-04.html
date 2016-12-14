@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+      <meta charset="utf-8">
+      <link rel="shortcut icon" href="../../favicon/favicon.ico" type="image/x-icon"/>
+      <title>@q3aql - Blog</title>
+      <meta name="Enrique Molina Marco" content="1 ciclo superior">
+      <meta name="description" content="HTML5">
+      <link rel="stylesheet" href="../../css/estilos.css" type="text/css">
+  </head>
+  <body>
+    <div id="pagina">
+      <header>
+        <h1><img alt="logo" src="../../img/logo.png" id="logo">@q3aql: Mi web minimalista</h1>
+      </header>
+      <nav>
+        <ul>
+          <li class="acerca"><a href="../../index.html">Acerca de mi</a></li>
+          <li class="blog"><a id="seleccionado" href="../index.html">Blog</a></li>
+          <li class="tutorial"><a href="../../tutoriales/index.html">Videotutorial</a></li>
+          <li class="contacto"><a href="../../contacto/index.html">Contacto</a></li>
+        </ul>
+      </nav>
+      <main>
+        <section>
+          <h2 id="blog">Blog > Julio de 2015:</h2>
+          <article>
+            <h2>.</h2>
+            <h3 id="articulo">Como instalar SopCast en Debian 8/Ubuntu 14.04:</h3>
+            <p>* SopCast es un software que nos permite ver multitud de canales online alrededor del mundo de forma
+              muy fácil y simple. En esta ocasión, explicaré de forma muy breve como instalarlo por petición de un
+              amigo que me lo ha solicitado.</p>
+            <p>* La instalación se realiza desde un PPA de Ubuntu, así que mientras la instalación en éste será muy
+              simple, en Debian tendremos que hacer unos pocos pasos más.
+            <p class="titulo">- Instalación en Ubuntu 14.04/14.10:</p>
+            <p>* Se debe abrir el terminal y como superusuario ejecutar los siguientes comandos:
+            <code>$ sudo add-apt-repository ppa:lyc256/sopcast-player-ppa</code>
+            <code>$ sudo apt-get update</code>
+            <code>$ sudo apt-get install sopcast-player</code></p>
+            <p class="titulo">- Instalación en Debian 8 (Jessie):</p>
+            <p>* Abrimos la terminal y nos logueamos como root, seguidamente introducimos los siguientes comandos:
+            <code># dpkg --add-architecture i386</code>
+            <code># apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 7733638E</code>
+            <code># nano /etc/apt/sources.list.d/sopcast.list</code></p>
+            <p>* Luego, añadimos las siguientes líneas al archivo que se nos ha abierto y lo guardamos:
+            <code>deb http://ppa.launchpad.net/lyc256/sopcast-player-ppa/ubuntu trusty main</code>
+            <code>deb-src http://ppa.launchpad.net/lyc256/sopcast-player-ppa/ubuntu trusty main</code></p>
+            <p>* Finalmente, actualizamos el repositorio y instalamos el paquete:
+            <code># apt-get update</code>
+            <code># apt-get install sopcast-player</code></p>
+          </article>
+        </section>
+      </main>
+      <footer>
+        <p>El contenido de esta página está licenciado bajo <a href="https://www.gnu.org/copyleft/copyleft.html">Copyleft</a>.</p>
+          <a href="http://asix.ddns.net/irc/"><div id="chatimg" class="imgfooter"></div></a>
+          <a href="mailto:q3aql@openmailbox.org"><div id="emailimg" class="imgfooter"></div></a>
+          <a href="https://github.com/q3aql"><div id="githubimg" class="imgfooter"></div></a>
+          <a href="https://twitter.com/q3aql"><div id="twitterimg" class="imgfooter"></div></a>
+      </footer>
+    </div>
+  </body>
+</html>
