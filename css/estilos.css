@@ -381,3 +381,39 @@ iframe {
   margin-top: 5px;
   border: 1px solid white;
 }
+
+#descargar-proyectos {
+  font-family: ubuntu;
+  font-size: 17px;
+  font-style: italic;
+  background: rgba(0,0,0,0);
+  border: 1px solid white;
+  border-radius: 5px;
+  margin-left: 285px;
+  margin-bottom: 5px;
+  color: white;
+  width: 200px;
+  height: 30px;
+  text-align: right;
+  background: url(../img/github.png) no-repeat left;
+  background-size: 21px 20px;
+  padding-left: 5px;
+}
+
+#descargar-fuente {
+  font-family: ubuntu;
+  font-size: 17px;
+  font-style: italic;
+  background: rgba(0,0,0,0);
+  border: 1px solid white;
+  border-radius: 5px;
+  margin-left: 275px;
+  margin-bottom: 5px;
+  color: white;
+  width: 230px;
+  height: 30px;
+  text-align: right;
+  background: url(../img/github.png) no-repeat left;
+  background-size: 21px 20px;
+  padding-left: 5px;
+}
