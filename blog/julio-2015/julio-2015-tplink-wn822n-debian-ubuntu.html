@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+      <meta charset="utf-8">
+      <link rel="shortcut icon" href="../../favicon/favicon.ico" type="image/x-icon"/>
+      <title>@q3aql - Blog</title>
+      <meta name="Enrique Molina Marco" content="1 ciclo superior">
+      <meta name="description" content="HTML5">
+      <link rel="stylesheet" href="../../css/estilos.css" type="text/css">
+  </head>
+  <body>
+    <div id="pagina">
+      <header>
+        <h1><img alt="logo" src="../../img/logo.png" id="logo">@q3aql: Mi web minimalista</h1>
+      </header>
+      <nav>
+        <ul>
+          <li class="acerca"><a href="../../index.html">Acerca de mi</a></li>
+          <li class="blog"><a id="seleccionado" href="../index.html">Blog</a></li>
+          <li class="tutorial"><a href="../../tutoriales/index.html">Videotutorial</a></li>
+          <li class="contacto"><a href="../../contacto/index.html">Contacto</a></li>
+        </ul>
+      </nav>
+      <main>
+        <section>
+          <h2 id="blog">Blog > Junio de 2015:</h2>
+          <article>
+            <h2>.</h2>
+            <h3 id="articulo">Solucionar problema de drivers con TP-Link TL-WN822N (v.3) en Debian/Ubuntu:</h3>
+            <p>* Hace unos días compré un adaptador inalambrico TP-Link TL-WN822N. Dicho adaptador pese a que en principio
+              es compatible, tuve que sufrir un poquito hasta conseguir hacerlo funcionar correctamente en GNU/Linux.</p>
+            <p>* Para empezar, hay que decir que los pasos que voy a explicar a continuación los he realizado en Debian
+              Jessie y en Ubuntu, pero puede que también funcionen en el resto de distribuciones GNU/Linux adaptando algunos
+              pasos. También debo decir que existen tres versiones del mismo adaptador, las cuales la versión 1 y 2 disponen
+              de un chip Atheros, así que podemos instalar los drivers mediante el siguiente comando como root en Debian
+              (Ubuntu tiene instalado el driver por defecto):
+            <code># apt-get install firmware-atheros</code></p>
+            <p>* En cambio, el problema llega cuando nuestro adaptador es la versión 3 como el mío, ya que éste dispone de un
+              chip Realtek que es el causante de todos los problemas.</p>
+            <p>* En mi caso, lo primero que hice fue instalar el driver que se encuentra en el repositorio:
+            <code># apt-get install firmware-realtek</code></p>
+            <p>* Tras instalar el driver, me encontré con la gran alegría de que el sistema detectó el adaptador a la primera,
+              así que procedí a conectarme a mi red wifi de la forma habitual. Una vez estaba conectado, me di cuenta que por
+              alguna razón el adaptador tenía continuamente la luz fija, no realizaba ningún parpadeo pese a enviar tráfico de
+              red. También pude observar que la señal era muy inestable y se volvia débil por momentos, además de existir caídas
+              constantes de la red. En este punto es cuando comenzó mi frustación.</p>
+            <p>* Llegados a este punto, decidí buscar alguna solución por internet y tras varias horas buscando y rebuscando,
+              encontré una solución bastante fácil y que en mi caso resolvió el problema satisfactoriamente. Lo primero que hice
+              fue instalar las siguientes dependencias:
+            <code># apt-get install git linux-headers-generic build-essential dkms</code></p>
+            <p>* Una vez instaladas las dependencias, descargué un parche del driver rtl8192cu (el cual utiliza el adaptador) del
+              repositorio de Github:
+            <code>$ git clone <a href="https://github.com/pvaret/rtl8192cu-fixes.git">https://github.com/pvaret/rtl8192cu-fixes.git</a></code></p>
+            <p>* Luego realicé la instalación del driver de la manera que especifica el autor del parche (como root):
+            <code># dkms add ./rtl8192cu-fixes</code>
+            <code># dkms install 8192cu/1.10</code>
+            <code># depmod -a</code>
+            <code># cp ./rtl8192cu-fixes/blacklist-native-rtl8192.conf /etc/modprobe.d/</code></p>
+            <p>* Finalmente reinicié el equipo y el problema estaba solucionado, se podía observar que el adaptador esta vez parpadeaba
+              cuando enviaba/recibia tráfico de red, la señal era siempre del 98-100% y la velocidad era muy buena. Así que espero que
+              la persona que sufra el mismo problema pueda resolverlo de la manera que yo lo hice.</p>
+            <p>Fuente: <a href="https://github.com/pvaret/rtl8192cu-fixes">https://github.com/pvaret/rtl8192cu-fixes</a></p>
+          </article>
+        </section>
+      </main>
+      <footer>
+        <p>El contenido de esta página está licenciado bajo <a href="https://www.gnu.org/copyleft/copyleft.html">Copyleft</a>.</p>
+          <a href="http://asix.ddns.net/irc/"><div id="chatimg" class="imgfooter"></div></a>
+          <a href="mailto:q3aql@openmailbox.org"><div id="emailimg" class="imgfooter"></div></a>
+          <a href="https://github.com/q3aql"><div id="githubimg" class="imgfooter"></div></a>
+          <a href="https://twitter.com/q3aql"><div id="twitterimg" class="imgfooter"></div></a>
+      </footer>
+    </div>
+  </body>
+</html>
