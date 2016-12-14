@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+      <meta charset="utf-8">
+      <link rel="shortcut icon" href="../../favicon/favicon.ico" type="image/x-icon"/>
+      <title>@q3aql - Blog</title>
+      <meta name="Enrique Molina Marco" content="1 ciclo superior">
+      <meta name="description" content="HTML5">
+      <link rel="stylesheet" href="../../css/estilos.css" type="text/css">
+  </head>
+  <body>
+    <div id="pagina">
+      <header>
+        <h1><img alt="logo" src="../../img/logo.png" id="logo">@q3aql: Mi web minimalista</h1>
+      </header>
+      <nav>
+        <ul>
+          <li class="acerca"><a href="../../index.html">Acerca de mi</a></li>
+          <li class="blog"><a id="seleccionado" href="../index.html">Blog</a></li>
+          <li class="tutorial"><a href="../../tutoriales/index.html">Videotutorial</a></li>
+          <li class="contacto"><a href="../../contacto/index.html">Contacto</a></li>
+        </ul>
+      </nav>
+      <main>
+        <section>
+          <h2 id="blog">Blog > Julio de 2015:</h2>
+          <article>
+            <h2>.</h2>
+            <h3 id="articulo">Instalar tema y pack de iconos Numix en Ubuntu/Debian:</h3>
+            <p>* Para los que no lo sepan, Numix es un pack de iconos y temas para los escritorios mas utilizados como
+              Gnome, Mate, Unity, Xfce o incluso Openbox. Numix está considerado por muchos, como uno de los mejores
+              packs de iconos junto al pack de iconos Faenza.</p>
+            <p>* En esta publicación no me voy a entretener y voy a ir directamente al grano con los pasos para instalar
+              Numix en Ubuntu y en Debian (Jessie).</p>
+            <p class="titulo">- Instalación en Ubuntu:</p>
+            <p>* Abrimos la terminal y ejecutamos los siguientes comandos:
+            <code>$ sudo add-apt-repository sudo ppa:numix/ppa</code>
+            <code>$ sudo apt-get update</code>
+            <code>$ sudo apt-get install gtk2-engines-murrine</code>
+            <code>$ sudo apt-get install numix-gtk-theme numix-icon-theme numix-icon-theme-circle numix-icon-theme-bevel</code></p>
+            <p class="titulo">- Instalación en Debian:</p>
+            <p>* Abrimos la terminal y ejecutamos los siguientes comandos como root (ejecutar “su”):
+            <code># apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 0F164EEB</code>
+            <code># nano /etc/apt/sources.list.d/numix.list</code></p>
+            <p>* Añadimos las siguientes líneas al archivo “numix.list“:
+            <code>deb http://ppa.launchpad.net/numix/ppa/ubuntu trusty main<br>
+            deb-src http://ppa.launchpad.net/numix/ppa/ubuntu trusty main</code></p>
+            <p>* Por último, actualizamos el repositorio y instalamos los paquetes:
+            <code># apt-get update</code>
+            <code># apt-get install gtk2-engines-murrine</code>
+            <code># apt-get install numix-gtk-theme numix-icon-theme numix-icon-theme-circle numix-icon-theme-bevel</code></p>
+            <p class="titulo">- Mejoras en Debian:</p>
+            <p>* En mi caso, compilando y actualizando el ‘engine’ de murrine, pude mejor el rendimiento y corregir algunos
+              errores que se producían en el gestor de ventanas de Xfce4. Los pasos que realicé fueron los siguientes (en
+              la terminal como root):
+            <code># cd /tmp/</code>
+            <code># wget -c "https://download.gnome.org/sources/murrine/0.98/murrine-0.98.2.tar.xz"</code>
+            <code># tar Jxvf murrine-0.98.2.tar.xz</code>
+            <code># apt-get build-dep gtk2-engines-murrine</code>
+            <code># cd murrine-0.98.2/ && mkdir -p /opt/Murrine/</code>
+            <code># ./configure --prefix=/opt/Murrine/</code>
+            <code># make && make install</code>
+            <code># cd /opt/Murrine/ && cp -rf share/ /usr/</code>
+            <code># cp -rf /opt/Murrine/lib/gtk-2.0/2.10.0/engines/* /usr/lib/x86_64-linux-gnu/gtk-2.0/2.10.0/engines/ (solo en 64-bits)</code>
+            <code># cp -rf /opt/Murrine/lib/gtk-2.0/2.10.0/engines/* /usr/lib/i386-linux-gnu/gtk-2.0/2.10.0/engines/ (solo en 32-bits)</code>
+            <code># reboot</code></p>
+            <p>Nota: Para los que utilizan el escritorio KDE pueden instalar el paquete ‘numix-kde-theme’.</p>
+          </article>
+        </section>
+      </main>
+      <footer>
+        <p>El contenido de esta página está licenciado bajo <a href="https://www.gnu.org/copyleft/copyleft.html">Copyleft</a>.</p>
+          <a href="http://asix.ddns.net/irc/"><div id="chatimg" class="imgfooter"></div></a>
+          <a href="mailto:q3aql@openmailbox.org"><div id="emailimg" class="imgfooter"></div></a>
+          <a href="https://github.com/q3aql"><div id="githubimg" class="imgfooter"></div></a>
+          <a href="https://twitter.com/q3aql"><div id="twitterimg" class="imgfooter"></div></a>
+      </footer>
+    </div>
+  </body>
+</html>
