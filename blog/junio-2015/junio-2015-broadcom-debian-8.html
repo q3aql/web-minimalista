@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+      <meta charset="utf-8">
+      <link rel="shortcut icon" href="../../favicon/favicon.ico" type="image/x-icon"/>
+      <title>@q3aql - Blog</title>
+      <meta name="Enrique Molina Marco" content="1 ciclo superior">
+      <meta name="description" content="HTML5">
+      <link rel="stylesheet" href="../../css/estilos.css" type="text/css">
+  </head>
+  <body>
+    <div id="pagina">
+      <header>
+        <h1><img alt="logo" src="../../img/logo.png" id="logo">@q3aql: Mi web minimalista</h1>
+      </header>
+      <nav>
+        <ul>
+          <li class="acerca"><a href="../../index.html">Acerca de mi</a></li>
+          <li class="blog"><a id="seleccionado" href="../index.html">Blog</a></li>
+          <li class="tutorial"><a href="../../tutoriales/index.html">Videotutorial</a></li>
+          <li class="contacto"><a href="../../contacto/index.html">Contacto</a></li>
+        </ul>
+      </nav>
+      <main>
+        <section>
+          <h2 id="blog">Blog > Junio de 2015:</h2>
+          <article>
+            <h2>.</h2>
+            <h3 id="articulo">Instalar controlador Broadcom (BCM43142) en Debian 8 (Jessie):</h3>
+            <p class="titulo">1 - Agregar el repositorio “non-free”</p>
+            <p>* En primer lugar, lo que se debe hacer es agregar el repositorio “non-free” en Debian, así que
+              para ello debemos editar el archivo /etc/apt/sources.list siendo usuario root. Podemos hacerlo
+              ejecutando el comando “su” y una vez registrados como administrador del sistema, editar el archivo
+              con el comando siguiente:
+            <code>$ nano /etc/apt/sources.list</code></p>
+            <p>* Cuando esté abierto el archivo con el editor, deberemos editarlo para dejarlo de la siguiente manera:
+            <code>deb http://ftp.es.debian.org/debian/ jessie main contrib non-free<br>
+              deb-src http://ftp.es.debian.org/debian/ jessie main contrib non-free<br>
+              <br>
+              deb http://security.debian.org/ jessie/updates main contrib non-free<br>
+              deb-src http://security.debian.org/ jessie/updates main contrib non-free<br>
+              <br>
+              # jessie-updates, previously known as 'volatile'<br>
+              deb http://ftp.es.debian.org/debian/ jessie-updates main contrib non-free<br>
+              deb-src http://ftp.es.debian.org/debian/ jessie-updates main contrib non-free</code></p>
+            <p class="titulo">2 - Instalar los paquetes necesarios</p>
+            <p>* Cuando tengamos el archivo editado y guardado de la manera que he mencionado más arriba, instalaremos
+              los paquetes correspondientes con los siguientes comandos:
+            <code># apt-get update</code>
+            <code># apt-get upgrade</code>
+            <code># apt-get install module-assistant wireless-tools broadcom-sta-common</code></p>
+            <p class="titulo">3 - Compilar los módulos</p>
+            <p>* Una vez están instalados los paquetes que necesitamos, procederemos a compilar los módulos para el kernel.
+              Para ello, lo haremos con los siguientes comandos:
+            <code># m-a a-i broadcom-sta</code>
+            <code># echo blacklist brcm80211 >> /etc/modprobe.d/broadcom-sta-common.conf</code>
+            <code># update-initramfs -u -k $(uname -r)</code></p>
+            <p class="titulo">4 - Cargar el módulo</p>
+            <p>* Como último paso, solo quedaría eliminar los módulos innecesarios y cargar el módulo que hemos compilado.
+            <code># modprobe -r b44 b43 b43legacy ssb brcm80211</code>
+            <code># modprobe wl</code></p>
+            <p>Nota: Al cargar el módulo debe empezar a funcionar la tarjeta inalámbrica directamente, en caso de no ser así,
+              deberemos reiniciar el equipo.</p>
+          </article>
+        </section>
+      </main>
+      <footer>
+        <p>El contenido de esta página está licenciado bajo <a href="https://www.gnu.org/copyleft/copyleft.html">Copyleft</a>.</p>
+          <a href="http://asix.ddns.net/irc/"><div id="chatimg" class="imgfooter"></div></a>
+          <a href="mailto:q3aql@openmailbox.org"><div id="emailimg" class="imgfooter"></div></a>
+          <a href="https://github.com/q3aql"><div id="githubimg" class="imgfooter"></div></a>
+          <a href="https://twitter.com/q3aql"><div id="twitterimg" class="imgfooter"></div></a>
+      </footer>
+    </div>
+  </body>
+</html>

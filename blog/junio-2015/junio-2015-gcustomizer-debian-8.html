@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+      <meta charset="utf-8">
+      <link rel="shortcut icon" href="../../favicon/favicon.ico" type="image/x-icon"/>
+      <title>@q3aql - Blog</title>
+      <meta name="Enrique Molina Marco" content="1 ciclo superior">
+      <meta name="description" content="HTML5">
+      <link rel="stylesheet" href="../../css/estilos.css" type="text/css">
+  </head>
+  <body>
+    <div id="pagina">
+      <header>
+        <h1><img alt="logo" src="../../img/logo.png" id="logo">@q3aql: Mi web minimalista</h1>
+      </header>
+      <nav>
+        <ul>
+          <li class="acerca"><a href="../../index.html">Acerca de mi</a></li>
+          <li class="blog"><a id="seleccionado" href="../index.html">Blog</a></li>
+          <li class="tutorial"><a href="../../tutoriales/index.html">Videotutorial</a></li>
+          <li class="contacto"><a href="../../contacto/index.html">Contacto</a></li>
+        </ul>
+      </nav>
+      <main>
+        <section>
+          <h2 id="blog">Blog > Junio de 2015:</h2>
+          <article>
+            <h2>.</h2>
+            <h3 id="articulo">Grub Customizer: Interfaz gráfica para Grub2/Burg en GNU/Linux:</h3>
+            <p>* <a href="https://launchpad.net/grub-customizer">Grub Customizer</a> es una interfaz gráfica
+              que nos permite gestionar y personalizar nuestro menú de arranque Grub2/Burg. Esta aplicación nos
+              permitirá entre otras cosas, editar o añadir nuevas entradas al menú, editar el nombre de las entradas
+              e incluso editar los parámetros de arranque del kernel. Así que como considero que puede ser muy útil
+              para aquellos que nos gusta editar el grub sin tener que meternos a editar líneas en /boot/grub/grub.cfg,
+              voy a explicar como instalar esta aplicación.</p>
+            <p class="titulo">- Instalación en Ubuntu</p>
+            <p>* Si disponemos de Ubuntu, podremos instalar fácilmente la aplicación, ya que ésta se encuentra en
+              <a href="https://launchpad.net/">Launchpad</a>. Con tres sencillos comandos la tendremos en nuestro sistema:
+            <code>$ sudo add-apt-repository ppa:danielrichter2007/grub-customizer</code>
+            <code>$ sudo apt-get update</code>
+            <code>$ sudo apt-get install grub-customizer</code></p>
+            <p class="titulo">- Instalación en otras distros GNU/Linux</p>
+            <p>* En caso de que nuestra distribución GNU/Linux sea otra diferente a Ubuntu, tendremos que compilar el código fuente.
+              Para ello, primero será necesario tener en nuestro sistema las siguientes dependencias instaladas:
+            <code>* cmake<br>
+            * g++ o gcc-c++<br>
+            * libgtkmm-3.0-dev o gtkmm30-devel<br>
+            * libgtkmm-2.4-dev o gtkmm24-devel (en caso de usar la versión Gtk2)<br>
+            * gettext<br>
+            * libssl-dev o openssl-devel<br>
+            * libarchive-dev o libarchive-devel</code></p>
+            <p>* Si por ejemplo nuestro sistema es Debian, las podemos instalar con el siguiente comando:
+            <code># apt-get install cmake g++ libgtkmm-3.0-dev gettext libssl-dev libarchive-dev -y</code></p>
+            <p>* Una vez instaladas las dependencias, descargaremos el código fuente de la página oficial
+            (<a href="https://launchpad.net/grub-customizer/+download">https://launchpad.net/grub-customizer/+download</a>) y realizaremos
+            la compilación. En este caso, explicaré como compilar la versión 4.0.6, ya que es la última liberada hasta el momento en el
+            que escribo este artículo. Con los siguientes comandos realizaremos todos los pasos necesarios:
+            <code>$ cd /tmp/</code>
+            <code>$ wget -c <a href="https://launchpad.net/grub-customizer/5.0/5.0.6/+download/grub-customizer_5.0.6.tar.gz">
+              https://launchpad.net/grub-customizer/5.0/5.0.6/+download/grub-customizer_5.0.6.tar.gz</a></code>
+            <code>$ tar zxvf grub-customizer_5.0.6.tar.gz</code>
+            <code>$ cd grub-customizer-5.0.6/</code>
+            <code>$ cmake . && make</code>
+            <code># make install</code></p>
+            <p class="titulo">- Arreglar icono en el menú de aplicaciones</p>
+            <p>* En mi caso, una vez tenia instalada la aplicación, me encontré con el hecho de que la entrada que se creó en el menú de
+              aplicaciones aparecía sin icono, así que lo que hice fue editar el acceso directo como root:
+            <code># nano /usr/share/applications/grub-customizer.desktop</code></p>
+            <p>* Cuando tenia el archivo abierto con el editor de textos, cambié la línea donde se especifica la ruta del icono:
+            <code>Icon=grub-customizer -> Icon=/usr/share/icons/hicolor/128x128/apps/grub-customizer.png</code></p>
+            <p>* Y esto es todo, una vez hecho todos los pasos mencionados, ya podremos editar el grub de la forma mas fácil y cómoda posible.</p>
+            <p>Fuente: <a href="https://answers.launchpad.net/grub-customizer/+faq/1397">https://answers.launchpad.net/grub-customizer/+faq/1397</a></p>
+          </article>
+        </section>
+      </main>
+      <footer>
+        <p>El contenido de esta página está licenciado bajo <a href="https://www.gnu.org/copyleft/copyleft.html">Copyleft</a>.</p>
+          <a href="http://asix.ddns.net/irc/"><div id="chatimg" class="imgfooter"></div></a>
+          <a href="mailto:q3aql@openmailbox.org"><div id="emailimg" class="imgfooter"></div></a>
+          <a href="https://github.com/q3aql"><div id="githubimg" class="imgfooter"></div></a>
+          <a href="https://twitter.com/q3aql"><div id="twitterimg" class="imgfooter"></div></a>
+      </footer>
+    </div>
+  </body>
+</html>

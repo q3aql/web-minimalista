@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+      <meta charset="utf-8">
+      <link rel="shortcut icon" href="../../favicon/favicon.ico" type="image/x-icon"/>
+      <title>@q3aql - Blog</title>
+      <meta name="Enrique Molina Marco" content="1 ciclo superior">
+      <meta name="description" content="HTML5">
+      <link rel="stylesheet" href="../../css/estilos.css" type="text/css">
+  </head>
+  <body>
+    <div id="pagina">
+      <header>
+        <h1><img alt="logo" src="../../img/logo.png" id="logo">@q3aql: Mi web minimalista</h1>
+      </header>
+      <nav>
+        <ul>
+          <li class="acerca"><a href="../../index.html">Acerca de mi</a></li>
+          <li class="blog"><a id="seleccionado" href="../index.html">Blog</a></li>
+          <li class="tutorial"><a href="../../tutoriales/index.html">Videotutorial</a></li>
+          <li class="contacto"><a href="../../contacto/index.html">Contacto</a></li>
+        </ul>
+      </nav>
+      <main>
+        <section>
+          <h2 id="blog">Blog > Junio de 2015:</h2>
+          <article>
+            <h2>.</h2>
+            <h3 id="articulo">Instalar Pushbullet-Indicator en Debian 8 (Jessie)</h3>
+            <p>* <a href="http://www.atareao.es/tag/pushbullet-indicator/">Pushbullet-indicator</a> es una aplicación
+              desarrollada por un usuario llamado Lorenzo Carbonell y que es el autor del
+              blog <a href="http://www.atareao.es/">Atareao.es</a>. Dicha aplicación se utiliza para mostrar las notificaciones
+              de nuestro smartphone en la pantalla de nuestro PC y también para enviar mensajes y notificaciones entre los
+              diferentes dispositivos.</p>
+            <p>* El autor de la aplicación la desarrolló para funcionar en Ubuntu, pero a continuación explicaré como instalarla en
+              Debian Jessie con unos sencillos pasos y de forma muy breve.</p>
+            <p class="titulo">1 - Instalar las dependencias</p>
+            <p>* Lo primero y mas importante que tendremos que hacer es instalar las dependencias necesarias para que funcione la aplicación
+              correctamente, así que nos loguearemos como root en la terminal de nuestro sistema y usaremos el siguiente comando para instalarlas:
+            <code># apt-get install python3-dbus python3-requests python3-urllib3 gir1.2-appindicator3-0.1 gir1.2-notify-0.7 javascript-common
+              libappindicator3-1 libdbusmenu-glib4 libdbusmenu-gtk3-4 libindicator3-7 libjs-jquery libjs-sphinxdoc libjs-underscore libwebpdemux1
+              libwebpmux1 python3-pil python3-ws4py python-webkit gir1.2-webkit-3.0</code></p>
+            <p class="titulo">2 - Descargar los paquetes necesarios</p>
+            <p>* Lo siguiente que deberemos hacer es descargar los paquetes pushbullet-indicator y pushbullet-commons. Estos paquetes se encuentran en
+              las siguientes direcciones:
+            <code><a href="http://ppa.launchpad.net/atareao/atareao/ubuntu/pool/main/p/pushbullet-indicator/">
+              http://ppa.launchpad.net/atareao/atareao/ubuntu/pool/main/p/pushbullet-indicator/</a></code>
+            <code><a href="http://ppa.launchpad.net/atareao/atareao/ubuntu/pool/main/p/pushbullet-commons/">
+              http://ppa.launchpad.net/atareao/atareao/ubuntu/pool/main/p/pushbullet-commons/</a></code></p>
+            <p>* Al entrar en las direcciones, tendremos que descargar únicamente los paquetes *.deb, el resto de paquetes los tendremos que
+              descartar, así que finalmente deberemos tener solo 2 paquetes .deb.</p>
+            <p class="titulo">3 - Instalar paquetes</p>
+            <p>* Finalmente ya solo quedaría instalar los paquetes descargados, así que podemos instalarlos haciendo doble click sobre ellos
+              o abriendo la terminal donde se encuentran los paquetes y usando el siguiente comando como root:
+            <code># dpkg -i pushbullet-*.deb</code></p>
+            <p>* Cuando la aplicación se encuentre instalada, la podemos ejecutar desde el menú de aplicaciones de nuestro sistema o con el comando:
+            <code>$ /opt/extras.ubuntu.com/pushbullet-indicator/bin/pushbullet-indicator</code></p>
+            <p>Nota: Recuerda instalar la aplicación en tu smartphone Android o iOS para que puedas recibir las notificaciones en tu equipo, la página
+              oficial es <a href="https://www.pushbullet.com/">https://www.pushbullet.com/</a>.</p>
+            <p>Fuente original: <a href="http://www.atareao.es/tag/pushbullet-indicator/">http://www.atareao.es/tag/pushbullet-indicator/</a></p>
+          </article>
+        </section>
+      </main>
+      <footer>
+        <p>El contenido de esta página está licenciado bajo <a href="https://www.gnu.org/copyleft/copyleft.html">Copyleft</a>.</p>
+          <a href="http://asix.ddns.net/irc/"><div id="chatimg" class="imgfooter"></div></a>
+          <a href="mailto:q3aql@openmailbox.org"><div id="emailimg" class="imgfooter"></div></a>
+          <a href="https://github.com/q3aql"><div id="githubimg" class="imgfooter"></div></a>
+          <a href="https://twitter.com/q3aql"><div id="twitterimg" class="imgfooter"></div></a>
+      </footer>
+    </div>
+  </body>
+</html>

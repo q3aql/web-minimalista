@@ -1,0 +1,383 @@
+@font-face {
+  font-family: ubuntu;
+  src:url(../fonts/ubuntu.ttf) format('truetype'),
+  url(../fonts/ubuntu.eot) format('embedded-opentype');
+}
+
+@font-face {
+  font-family: calibri;
+  src:url(../fonts/calibri.ttf) format('truetype'),
+  url(../fonts/calibri.eot) format('embedded-opentype');
+}
+
+@font-face {
+  font-family: anonymous-pro;
+  src:url(../fonts/anonymous-pro.ttf) format('truetype'),
+  url(../fonts/anonymous-pro.eot) format('embedded-opentype');
+}
+
+#pagina {
+    width: 1078px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+body {
+  background-color: #282c34;
+  /* background-color: #21252b; */
+  /* background-color: #2e3436; */
+  padding-top: 20px;
+}
+
+a {
+  font-family: ubuntu;
+  text-decoration: none;
+  color: white;
+}
+
+nav ul {
+  list-style-type: none;
+  position: relative;
+  display: block;
+  margin: 0  auto;
+  left: -25px;
+}
+
+nav li {
+  font-size: 16px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 23px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.55);
+}
+
+.acerca {
+  background: url(../img/acerca.png) no-repeat 0px;
+  background-size: 18px 18px;
+}
+
+.tutorial {
+  background: url(../img/videos.png) no-repeat 0px;
+  background-size: 18px 18px;
+}
+
+.blog {
+    background: url(../img/blog.png) no-repeat 0px;
+    background-size: 18px 18px;
+}
+
+.contacto {
+  /* border: none; */
+  background: url(../img/contacto.png) no-repeat 0px;
+  background-size: 18px 18px;
+}
+
+#acerca {
+  padding-left: 45px;
+  background: url(../img/acerca.png) no-repeat 0px;
+  background-size: 32px 32px;
+  height: 31px;
+}
+
+#blog {
+  padding-left: 45px;
+  background: url(../img/blog.png) no-repeat 0px;
+  background-size: 32px 32px;
+  height: 30px;
+}
+
+#contacto {
+  padding-left: 45px;
+  background: url(../img/contacto.png) no-repeat 0px;
+  background-size: 32px 32px;
+  height: 30px;
+}
+
+#tutorial {
+  padding-left: 45px;
+  background: url(../img/videos.png) no-repeat 0px;
+  background-size: 32px 32px;
+  height: 33px;
+}
+
+ul a:hover {
+  color: #b32c2c;
+}
+
+.acerca:hover {
+  background: url(../img/acerca-activo.png) no-repeat 0px;
+  background-size: 18px 18px;
+}
+
+.tutorial:hover {
+  background: url(../img/videos-activo.png) no-repeat 0px;
+  background-size: 18px 18px;
+}
+
+.blog:hover {
+    background: url(../img/blog-activo.png) no-repeat 0px;
+    background-size: 18px 18px;
+}
+
+.contacto:hover {
+  /* border: none; */
+  background: url(../img/contacto-activo.png) no-repeat 0px;
+  background-size: 18px 18px;
+}
+
+#seleccionado {
+  background: url(../img/seleccionado.png) right no-repeat;
+  background-size: 13px 16px;
+  padding-right: 24px;
+}
+
+#seleccionado:hover {
+  background: url(../img/seleccionado-activo.png) right no-repeat;
+  background-size: 13px 16px;
+  padding-right: 24px;
+}
+
+header {
+  font-family: calibri;
+  color: white;
+  text-align: center;
+  /* background-color: #282828; */
+  background-color: #282c34;
+  padding-top: 5px;
+  /* padding-bottom: 10px; */
+  /* width: 99%; */
+  /* border: 1px solid rgba(255, 255, 255, 0.55); */
+  /* background-repeat: repeat-x; */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.55);
+  background-position: bottom;
+  margin-bottom: 10px;
+  margin-top: 15px;
+}
+
+header h1 {
+  position: relative;
+  left: 280px;
+  background-image: url(../img/doble-linea2.png);
+	background-repeat: repeat-x;
+	background-position: bottom;
+  background-size: 15px 10px;
+  text-align: right;
+  width: 460px;
+  padding-bottom: 15px;
+  padding-right: 10px;
+}
+
+#logo {
+  position: relative;
+  top: 10px;
+  width: 45px;
+  height: 45px;
+}
+
+nav {
+  width: 180px;
+  background-color: #282c34;
+  float: left;
+  padding: 5px;
+  margin-right: 5px;
+  /* border: 1px solid rgba(255, 255, 255, 0.55); */
+}
+
+main {
+  font-family: calibri;
+  background-color: #282c34;
+  float: left;
+  width: 878px;
+  /* border: 1px solid rgba(255, 255, 255, 0.55); */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.55);
+}
+
+main a {
+  font-family: calibri;
+  font-size: 17px;
+}
+
+main a:hover {
+  color: #b32c2c;
+}
+
+main h2 {
+  font-size: 24px;
+  color: white;
+  margin-left: 13px;
+  margin-right: 13px;
+}
+
+main h3 {
+  font-family: calibri;
+  font-size: 20px;
+  color: white;
+  margin-left: 15px;
+  margin-right:15px;
+}
+
+main p {
+  color: #efeee5;
+  font-size: 17px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+code {
+  display: block;
+  color: white;
+  width: 97%;
+  margin: 0 auto;
+  margin-top: 10px;
+  /* text-indent: 10px; */
+  font-family: anonymous-pro;
+  font-size: 14px;
+  padding-top: 6px;
+  padding-left: 15px;
+  /* background-color: #2e3436; */
+  background-color: #21252b;
+  padding-bottom: 6px;
+}
+
+code a {
+  font-family: anonymous-pro;
+  font-size: 14px;
+}
+
+footer a {
+  font-family: calibri;
+  font-size: 17px;
+}
+
+footer a:hover {
+  color: #b32c2c;
+}
+
+footer {
+  font-family: calibri;
+  font-size: 17px;
+  background-color: #282c34;
+  color: #efeee5;
+  float: left;
+  position: relative;
+  left: 195px;
+  width: 878px;
+  /* border-left: 1px solid rgba(255, 255, 255, 0.55); */
+  /* border-right: 1px solid rgba(255, 255, 255, 0.55); */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.55);
+}
+
+footer p {
+  margin-left: 15px;
+  margin-right: 15px;
+  text-indent: 25px;
+  background: url(../img/copyleft.png) no-repeat left;
+  background-size: 21px 21px;
+  float: left;
+}
+
+article>h2 {
+  display: none;
+}
+
+#twitterimg  {
+  background-image: url(../img/twitter.png);
+}
+
+#githubimg {
+  background-image: url(../img/github.png);
+}
+
+#chatimg {
+  background-image: url(../img/chat.png);
+}
+
+#emailimg {
+  background-image: url(../img/email.png);
+}
+
+.imgfooter  {
+  width: 21px;
+  height: 21px;
+  float: right;
+  background-size: 21px 21px;
+  margin-left: 8px;
+  margin-top: 15px;
+}
+
+#twitterimg:hover {
+  background-image: url(../img/twitter-activo.png);
+}
+
+#githubimg:hover {
+  background-image: url(../img/github-activo.png);
+}
+
+#chatimg:hover {
+  background-image: url(../img/chat-activo.png);
+}
+
+#emailimg:hover {
+  background-image: url(../img/email-activo.png);
+}
+
+.mes {
+  background: url(../img/mes.png) no-repeat left;
+  font-size: 20px;
+  background-size: 25px 25px;
+  text-indent: 32px;
+  margin-bottom: -5px;
+}
+
+.tutoriales {
+  background: url(../img/tutoriales.png) no-repeat left;
+  font-size: 20px;
+  background-size: 25px 25px;
+  text-indent: 32px;
+}
+
+.articulo {
+  list-style-type: none;
+  color: white;
+  background: url(../img/articulo.png) no-repeat left;
+  font-size: 17px;
+  background-size: 18px 18px;
+  text-indent: 25px;
+}
+
+.articulo:hover {
+  background: url(../img/articulo-activo.png) no-repeat left;
+  background-size: 18px 18px;
+}
+
+#articulo {
+  background: url(../img/articulo.png) no-repeat left;
+  font-size: 20px;
+  background-size: 25px 25px;
+  text-indent: 32px;
+  margin-bottom: -5px;
+  font-style: italic;
+}
+
+.titulo {
+  text-decoration: underline;
+}
+
+iframe {
+  margin-left: 20px;
+  margin-bottom: 10px;
+  border: 1px solid white;
+}
+
+.video-tutoriales {
+  margin-left: 20px;
+  width: 410px;
+  height: 300px;
+  margin-bottom: 10px;
+  border: 1px solid white;
+}
+
+.project-download {
+  margin-top: 5px;
+  border: 1px solid white;
+}

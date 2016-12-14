@@ -1,0 +1,148 @@
+@font-face {
+  font-family: calibri;
+  src:url(../fonts/calibri.ttf) format('truetype'),
+  url(../fonts/calibri.eot) format('embedded-opentype');
+}
+
+@font-face {
+  font-family: ubuntu;
+  src:url(../fonts/ubuntu.ttf) format('truetype'),
+  url(../fonts/ubuntu.eot) format('embedded-opentype');
+}
+
+form {
+  margin-top: 30px;
+}
+
+fieldset {
+  /* margin-left: 25px; */
+  width: 480px;
+  border: none;
+}
+
+label {
+  margin-left: 25px;
+  color: white;
+  display: block;
+}
+
+input {
+  margin-bottom: 1px;
+  display: block;
+  font-family: calibri;
+  font-size: 17px;
+  text-align: center;
+  border: none;
+  color: white;
+  background: rgba(0,0,0,0);
+  border-bottom: dotted 1px;
+}
+
+#nombre {
+  position: relative;
+  top: -23px;
+  left: 170px;
+  width: 330px;
+  height: 20px;
+}
+
+#apellidos {
+  position: relative;
+  top: -23px;
+  left: 170px;
+  width: 330px;
+  height: 20px;
+}
+
+#email {
+  position: relative;
+  top: -23px;
+  left: 170px;
+  width: 330px;
+  height: 20px;;
+}
+
+#mensaje {
+  font-family: calibri;
+  font-size: 17px;
+  position: relative;
+  top: -23px;
+  left: 170px;
+  background: rgba(0,0,0,0);
+  border: dotted 1px;
+  color: white;
+  width: 330px;
+  height: 130px;
+}
+
+#enviar {
+  font-family: ubuntu;
+  font-size: 17px;
+  font-style: italic;
+  background: rgba(0,0,0,0);
+  border: 1px solid white;
+  border-radius: 5px;
+  color: white;
+  width: 85px;
+  height: 30px;
+  background: url(../img/enviar.png) no-repeat left;
+  background-size: 21px 20px;
+  text-align: right;
+  padding-left: 5px;
+  position: relative;
+  top: 15px;
+  left: -168px;
+}
+
+#reiniciar {
+  font-family: ubuntu;
+  font-size: 17px;
+  font-style: italic;
+  background: rgba(0,0,0,0);
+  border: 1px solid white;
+  border-radius: 5px;
+  color: white;
+  width: 100px;
+  height: 30px;
+  background: url(../img/reiniciar.png) no-repeat left;
+  background-size: 21px 20px;
+  text-align: right;
+  padding-left: 5px;
+  position: relative;
+  left: 270px;
+  top: -15px;
+}
+
+input:not([type=text]):required {
+	background-image: url(../img/obligatorio.png);
+  background-size: 19px 19px;
+  background-repeat: no-repeat;
+  background-position: right;
+  outline: 0px;
+}
+
+input:not([type=text]):focus:valid {
+  background-image: url(../img/correcto.png);
+}
+
+input:not([type=text]):focus:invalid {
+  background-image: url(../img/incorrecto.png);
+  outline: 0px;
+}
+
+#mensaje:required {
+  background-image: url(../img/obligatorio.png);
+  background-size: 19px 19px;
+  background-repeat: no-repeat;
+  background-position: right top;
+  outline: 0px;
+}
+
+#mensaje:focus:valid {
+  background-image: url(../img/correcto.png);
+}
+
+#mensaje:focus:invalid {
+  background-image: url(../img/incorrecto.png);
+  outline: 0px;
+}
