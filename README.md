@@ -1,4 +1,5 @@
-## web-minimalista
+## Web-minimalista
+------------------
 
 ### Descargar codigo fuente usando git:
 
